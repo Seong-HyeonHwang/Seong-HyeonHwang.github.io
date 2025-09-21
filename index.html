@@ -6,68 +6,87 @@
   <title>Seong-Hyeon Hwang</title>
   <style>
     body {
-      font-family: "Helvetica Neue", Arial, sans-serif;
-      background-color: #ffffff;
-      color: #333333;
+      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+      background-color: #fdfdfd;
+      color: #333;
       margin: 0;
       padding: 0;
       line-height: 1.6;
     }
+
     header {
-      background-color: #f5f5f5;
-      padding: 2rem 1rem;
+      background: #fafafa;
+      padding: 3rem 1rem 2rem;
       text-align: center;
-      border-bottom: 1px solid #e0e0e0;
+      border-bottom: 1px solid #eee;
     }
     header h1 {
       margin: 0;
-      font-size: 2.5rem;
-      color: #222222;
+      font-size: 2.4rem;
+      color: #111;
+      font-weight: 600;
+      letter-spacing: -0.5px;
     }
     header p {
-      margin: 0.5rem 0 0;
-      font-size: 1rem;
-      color: #666666;
+      margin: 0.7rem 0 0;
+      font-size: 1.1rem;
+      color: #666;
     }
+
     main {
-      max-width: 800px;
+      max-width: 900px;
       margin: 2rem auto;
-      padding: 0 1rem;
+      padding: 0 1rem 4rem;
     }
+
     section {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      padding: 2rem;
       margin-bottom: 2rem;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    section:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
     }
     section h2 {
-      font-size: 1.8rem;
-      margin-bottom: 0.5rem;
-      color: #222222;
-      border-bottom: 2px solid #e0e0e0;
-      padding-bottom: 0.3rem;
+      font-size: 1.6rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+      font-weight: 600;
+      color: #222;
     }
+
     section ul {
-      list-style: none;
-      padding: 0;
+      padding-left: 1.4rem;
+      margin: 0.5rem 0 0;
     }
     section li {
-      margin-bottom: 0.6rem;
+      margin-bottom: 0.5rem;
+      color: #444;
     }
-    section a {
-      color: #0066cc;
+
+    a {
+      color: #0070c9; /* Apple blue */
       text-decoration: none;
     }
-    section a:hover {
+    a:hover {
       text-decoration: underline;
     }
+
     .meta {
-      font-size: 0.9rem;
-      color: #555555;
+      font-size: 0.95rem;
+      color: #666;
     }
+
     footer {
       text-align: center;
       padding: 2rem 1rem;
       font-size: 0.9rem;
-      color: #777777;
-      border-top: 1px solid #e0e0e0;
+      color: #777;
+      border-top: 1px solid #eee;
     }
   </style>
 </head>
@@ -80,72 +99,58 @@
   <main>
     <section>
       <h2>Biography</h2>
-      <p>I am a Ph.D. student at KAIST <a href="https://sites.google.com/view/seonghyeonhwang/data-intelligence-lab">Data Intelligence Lab</a>, advised by Professor <a href="https://sites.google.com/view/seonghyeonhwang/steven-euijong-whang">Steven Euijong Whang</a>. My research interests center on Data Augmentation for Responsible AI and Data-centric AI, where I explore methods to improve the robustness of AI systems while enhancing data quality and diversity. I have developed deep expertise in data augmentation techniques that are crucial for enhancing AI model performance and mitigating overfitting.</p>
-      <p>My research contributions span multiple domains including AI, Computer Vision, and Data Mining. Through collaborations with Samsung Electronics and Samsung Research, I have gained extensive industry experience implementing AI solutions that address real-world challenges, effectively bridging the gap between theoretical research and practical applications.</p>
+      <p>I am a Ph.D. student at KAIST <a href="#">Data Intelligence Lab</a>, advised by Professor <a href="#">Steven Euijong Whang</a>. My research interests center on Data Augmentation for Responsible AI and Data-centric AI, where I explore methods to improve the robustness of AI systems while enhancing data quality and diversity.</p>
       <p class="meta">Email: sh (dot) hwang (at) kaist (dot) ac (dot) kr</p>
       <p class="meta">
-        <a href="https://drive.google.com">Curriculum Vitae</a> · 
-        <a href="https://www.linkedin.com">LinkedIn</a> · 
-        <a href="https://github.com">GitHub</a> · 
-        <a href="https://scholar.google.com">Google Scholar</a>
+        <a href="#">CV</a> · <a href="#">LinkedIn</a> · <a href="#">GitHub</a> · <a href="#">Google Scholar</a>
       </p>
     </section>
 
     <section>
       <h2>Publications</h2>
       <ul>
-        <li><strong>MIDAS:</strong> Misalignment-based Data Augmentation Strategy for Imbalanced Multimodal Learning — S. Hwang*, S. Choi*, and S. E. Whang · NeurIPS 2025</li>
-        <li><strong>T-CIL:</strong> Temperature Scaling using Adversarial Perturbation for Calibration in Class-Incremental Learning — <a href="https://arxiv.org">Paper</a> · <a href="https://github.com">Code</a> · <a href="https://docs.google.com">Slides</a> · <a href="https://www.youtube.com">Talk</a> · <a href="https://cvpr.thecvf.com">Poster</a></li>
-        <li><strong>GradMix:</strong> Gradient-based Selective Mixup for Robust Data Augmentation in Class-Incremental Learning — M. Kim, S. Hwang, and S. E. Whang · Under review</li>
-        <li><strong>RC-Mixup:</strong> A Data Augmentation Strategy against Noisy Data for Regression Tasks — <a href="https://dl.acm.org">Paper</a> · <a href="https://github.com">Code</a> · <a href="https://docs.google.com">Slides</a> · <a href="https://drive.google.com">Talk</a> · KAIST Research Breakthroughs (Sep. 2024)</li>
-        <li><strong>Quilt:</strong> Robust Data Segment Selection against Concept Drifts — M. Kim, S. Hwang, and S. E. Whang · AAAI 2024</li>
-        <li><strong>RegMix:</strong> Data Mixing Augmentation for Regression — S. Hwang and S. E. Whang · ArXiv 2021</li>
-        <li><strong>Inspector Gadget:</strong> A Data Programming-Based Labeling System for Industrial Images — G. Heo, Y. Roh, S. Hwang, D. Lee, and S. E. Whang · VLDB 2021</li>
-        <li><strong>Enhancing Data Sparsity in Deep Neural Networks:</strong> S. Lee, S. Hwang, K. Kim, and W. J. Song · Summer Annual Conference of IEIE 2018</li>
+        <li><strong>MIDAS:</strong> Misalignment-based Data Augmentation Strategy for Imbalanced Multimodal Learning · NeurIPS 2025</li>
+        <li><strong>T-CIL:</strong> Temperature Scaling using Adversarial Perturbation for Calibration in Class-Incremental Learning (<a href="#">Paper</a>, <a href="#">Code</a>)</li>
+        <li><strong>GradMix:</strong> Gradient-based Selective Mixup for Robust Data Augmentation in Class-Incremental Learning · Under review</li>
+        <li><strong>RC-Mixup:</strong> A Data Augmentation Strategy against Noisy Data for Regression Tasks (<a href="#">Paper</a>, <a href="#">Code</a>)</li>
       </ul>
     </section>
 
     <section>
       <h2>Education</h2>
       <ul>
-        <li>Ph.D. in Electrical Engineering, KAIST — Mar. 2021 - Feb. 2026 (Expected) · Advisor: Prof. Steven Euijong Whang</li>
-        <li>M.S. in Electrical Engineering, KAIST — Mar. 2019 - Feb. 2021 · Advisor: Prof. Steven Euijong Whang</li>
-        <li>B.S. in Electrical Engineering, Yonsei University (Magna cum laude) — Mar. 2013 - Feb. 2019</li>
+        <li>Ph.D. in Electrical Engineering, KAIST (2021-2026 expected)</li>
+        <li>M.S. in Electrical Engineering, KAIST (2019-2021)</li>
+        <li>B.S. in Electrical Engineering, Yonsei University (2013-2019, Magna cum laude)</li>
       </ul>
     </section>
 
     <section>
       <h2>Patent</h2>
       <ul>
-        <li>Electronic Device Supporting Manufacture of Semiconductor Device and Operating Method of Electronic Device — E. Whang, S. Hwang, H. Kwak, S. Ryu, S. Lee, Y. Sohn · 10-2023-0163647, domestic, pending, Dec. 2023 · (Co-work with Samsung Electronics)</li>
+        <li>Electronic Device Supporting Manufacture of Semiconductor Device and Operating Method — Co-work with Samsung Electronics (pending, Dec. 2023)</li>
       </ul>
     </section>
 
     <section>
       <h2>Experience</h2>
       <ul>
-        <li>Teaching Assistant, KAIST (2019-2023)<li>
-        <ul>
-          <li>EE205 Data Structures and Algorithms for Electrical Engineering</li>
-          <li>EE412 Foundation of Big Data Analytics</li>
-          <li>EE477 (EE488B &amp; EE488G) Database and Big Data Systems</li>
-          <li>EE616 Advanced Big Data - AI Integration</li>
-          <li>HSS310 Special Topics in Economics &lt;Modern Macroeconomic Theory and Dynamic Programming&gt;</li>
-        </ul>
+        <li>Teaching Assistant, KAIST (2019-2023)
+          <ul>
+            <li>EE205 Data Structures and Algorithms</li>
+            <li>EE412 Foundation of Big Data Analytics</li>
+          </ul>
+        </li>
         <li>Undergraduate Researcher, HPCS Lab, SNU (Summer 2018)</li>
-        <li>Spiking Neural Network (SNN) &amp; High Performance Computing</li>
       </ul>
     </section>
 
     <section>
       <h2>Honors</h2>
       <ul>
-        <li>KAIST Research Breakthroughs, Sep. 2024 · “AI updates itself by selecting and augmenting the data it trains on”</li>
-        <li>Graduation with honors: Magna cum laude (Top 3 % in the College of Engineering), Yonsei University · Feb. 2019</li>
-        <li>Yonsei Jinri Scholarship (Academic Excellence Scholarship) · Spring 2014 - Fall 2014</li>
-        <li>Academic Excellence Award (Top 10 % in the College of Engineering) · Fall 2013, Spring 2018</li>
-        <li>National Science & Engineering Scholarship · Fall 2013</li>
-        <li>Academic Excellence Award (Top 3 % in the College of Engineering) · Spring 2013</li>
+        <li>KAIST Research Breakthroughs (Sep. 2024)</li>
+        <li>Graduation with honors: Magna cum laude, Yonsei University (2019)</li>
+        <li>Academic Excellence Award (multiple semesters)</li>
       </ul>
     </section>
   </main>
