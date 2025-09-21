@@ -170,26 +170,34 @@
       <h2>Education</h2>
       <ul class="edu-list">
         <li>
-          <span class="degree">Ph.D. in Electrical Engineering, KAIST</span>
-          <span class="year">2021–2026 (expected)</span>
+          <div class="item-header">
+            <span class="degree">Ph.D. in Electrical Engineering, KAIST</span>
+            <span class="year">2021–2026 (expected)</span>
+          </div>
         </li>
         <li>
-          <span class="degree">M.S. in Electrical Engineering, KAIST</span>
-          <span class="year">2019–2021</span>
+          <div class="item-header">
+            <span class="degree">M.S. in Electrical Engineering, KAIST</span>
+            <span class="year">2019–2021</span>
+          </div>
         </li>
         <li>
-          <span class="degree">B.S. in Electrical Engineering, Yonsei University (Magna cum laude)</span>
-          <span class="year">2013–2019</span>
+          <div class="item-header">
+            <span class="degree">B.S. in Electrical Engineering, Yonsei University (Magna cum laude)</span>
+            <span class="year">2013–2019</span>
+          </div>
         </li>
       </ul>
     </section>
-
+    
     <section>
       <h2>Patent</h2>
       <ul class="edu-list">
         <li>
-          <span class="degree">Electronic Device Supporting Manufacture of Semiconductor Device and Operating Method — Co-work with Samsung Electronics</span>
-          <span class="year">Dec. 2023 (pending)</span>
+          <div class="item-header">
+            <span class="degree">Electronic Device Supporting Manufacture of Semiconductor Device and Operating Method — Co-work with Samsung Electronics</span>
+            <span class="year">Dec. 2023 (pending)</span>
+          </div>
         </li>
       </ul>
     </section>
@@ -198,9 +206,11 @@
       <h2>Experience</h2>
       <ul class="edu-list">
         <li>
-          <span class="degree">Teaching Assistant, KAIST</span>
-          <span class="year">2019–2023</span>
-          <ul>
+          <div class="item-header">
+            <span class="degree">Teaching Assistant, KAIST</span>
+            <span class="year">2019–2023</span>
+          </div>
+          <ul class="sub-list">
             <li>EE205 Data Structures and Algorithms for Electrical Engineering</li>
             <li>EE412 Foundation of Big Data Analytics</li>
             <li>EE477 (EE488B & EE488G) Database and Big Data Systems</li>
@@ -212,9 +222,11 @@
           </ul>
         </li>
         <li>
-          <span class="degree">Undergraduate Researcher, HPCS Lab, SNU</span>
-          <span class="year">Summer 2018</span>
-          <ul>
+          <div class="item-header">
+            <span class="degree">Undergraduate Researcher, HPCS Lab, SNU</span>
+            <span class="year">Summer 2018</span>
+          </div>
+          <ul class="sub-list">
             <li>Spiking Neural Network (SNN) & High Performance Computing</li>
           </ul>
         </li>
@@ -225,32 +237,44 @@
       <h2>Honors</h2>
       <ul class="edu-list">
         <li>
-          <span class="degree">Research Breakthroughs, KAIST</span>
-          <span class="year">Sep. 2024</span>
-          <ul>
+          <div class="item-header">
+            <span class="degree">Research Breakthroughs, KAIST</span>
+            <span class="year">Sep. 2024</span>
+          </div>
+          <ul class="sub-list">
             <li>AI updates itself by selecting and augmenting the data it trains on</li>
             <li>Among 15 top biannual research achievements in KAIST College of Engineering</li>
           </ul>
         </li>
         <li>
-          <span class="degree">Graduation with honors: Magna cum laude (Top 3% in the College of Engineering), Yonsei University</span>
-          <span class="year">Feb. 2019</span>
+          <div class="item-header">
+            <span class="degree">Graduation with honors: Magna cum laude (Top 3% in the College of Engineering), Yonsei University</span>
+            <span class="year">Feb. 2019</span>
+          </div>
         </li>
         <li>
-          <span class="degree">Yonsei Jinri Scholarship (Academic Excellence Scholarship)</span>
-          <span class="year">Spring 2014 – Fall 2014</span>
+          <div class="item-header">
+            <span class="degree">Yonsei Jinri Scholarship (Academic Excellence Scholarship)</span>
+            <span class="year">Spring 2014 – Fall 2014</span>
+          </div>
         </li>
         <li>
-          <span class="degree">Academic Excellence Award (Top 10% in the College of Engineering)</span>
-          <span class="year">Fall 2013, Spring 2018</span>
+          <div class="item-header">
+            <span class="degree">Academic Excellence Award (Top 10% in the College of Engineering)</span>
+            <span class="year">Fall 2013, Spring 2018</span>
+          </div>
         </li>
         <li>
-          <span class="degree">National Science & Engineering Scholarship</span>
-          <span class="year">Fall 2013</span>
+          <div class="item-header">
+            <span class="degree">National Science & Engineering Scholarship</span>
+            <span class="year">Fall 2013</span>
+          </div>
         </li>
         <li>
-          <span class="degree">Academic Excellence Award (Top 3% in the College of Engineering)</span>
-          <span class="year">Spring 2013</span>
+          <div class="item-header">
+            <span class="degree">Academic Excellence Award (Top 3% in the College of Engineering)</span>
+            <span class="year">Spring 2013</span>
+          </div>
         </li>
       </ul>
     </section>
@@ -262,15 +286,12 @@
         margin: 0;
       }
       .edu-list li {
+        margin-bottom: 0.8rem;
+      }
+      .item-header {
         display: flex;
         justify-content: space-between;
         align-items: baseline;
-        padding: 0.4rem 0;
-      }
-      .edu-list li > ul {
-        margin-top: 0.3rem;
-        margin-left: 1.2rem;
-        list-style-type: disc; /* itemize 효과 */
       }
       .edu-list .degree {
         font-weight: 500;
@@ -281,6 +302,12 @@
         color: #666;
         font-size: 0.95rem;
         white-space: nowrap;
+      }
+      .sub-list {
+        list-style-type: disc;
+        margin-top: 0.3rem;
+        margin-left: 1.5rem;
+        padding-left: 0;
       }
     </style>
   </main>
