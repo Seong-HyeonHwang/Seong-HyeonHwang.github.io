@@ -168,12 +168,45 @@
 
     <section>
       <h2>Education</h2>
-      <ul>
-        <li>Ph.D. in Electrical Engineering, KAIST (2021-2026 expected)</li>
-        <li>M.S. in Electrical Engineering, KAIST (2019-2021)</li>
-        <li>B.S. in Electrical Engineering, Yonsei University (2013-2019, Magna cum laude)</li>
+      <ul class="edu-list">
+        <li>
+          <span class="degree">Ph.D. in Electrical Engineering, KAIST</span>
+          <span class="year">2021–2026 (expected)</span>
+        </li>
+        <li>
+          <span class="degree">M.S. in Electrical Engineering, KAIST</span>
+          <span class="year">2019–2021</span>
+        </li>
+        <li>
+          <span class="degree">B.S. in Electrical Engineering, Yonsei University (Magna cum laude)</span>
+          <span class="year">2013–2019</span>
+        </li>
       </ul>
     </section>
+    .edu-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .edu-list li {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding: 0.4rem 0;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    .edu-list li:last-child {
+      border-bottom: none;
+    }
+    .edu-list .degree {
+      font-weight: 500;
+      color: #333;
+    }
+    .edu-list .year {
+      color: #666;
+      font-size: 0.95rem;
+      white-space: nowrap;
+    }
 
     <section>
       <h2>Patent</h2>
