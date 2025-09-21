@@ -115,6 +115,16 @@
       margin: 0.2rem 0;
       line-height: 1.25;
     }
+    .sub-sub-list {
+      list-style-type: circle;  /* 동그라미 bullet */
+      margin: 0.1rem 0 0.1rem 1.5rem;  /* 상하 간격 조절, 왼쪽 들여쓰기 */
+      padding-left: 0;
+    }
+    
+    .sub-sub-list li {
+      margin: 0.1rem 0;  /* 각 항목 간 간격 */
+      line-height: 1.25;
+    }
 
     a {
       color: #0070c9;
@@ -281,9 +291,14 @@
             <li>EE616 Advanced Big Data
             <li>EE616 Advanced Big Data - AI Integration</li>
             <li>HSS310 Special Topics in Economics: Modern Macroeconomic Theory and Dynamic Programming</li>
-            <li>Undergraduate Research Program (URP)</li>
-            <li>EE Co-op Internship</li>
-            <li>Pre-Semiconductor Research Program (Pre-SRP)</li>
+            <li>
+              Mentoring
+              <ul class="sub-sub-list">
+                <li>Undergraduate Research Program (URP)</li>
+                <li>EE Co-op Internship</li>
+                <li>Pre-Semiconductor Research Program (Pre-SRP)</li>
+              </ul>
+            </li>
           </ul>
         </li>
         <li>
@@ -308,8 +323,8 @@
             <span class="year">Sep. 2024</span>
           </div>
           <ul class="sub-list">
+            <li>Among 15 top biannual research achievements in College of Engineering, KAIST</li>
             <li>Title: AI updates itself by selecting and augmenting the data it trains on</li>
-            <li>Among 15 top biannual research achievements in KAIST College of Engineering</li>
           </ul>
         </li>
         <li>
