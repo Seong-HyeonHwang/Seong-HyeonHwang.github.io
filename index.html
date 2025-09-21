@@ -14,23 +14,45 @@
       line-height: 1.6;
     }
 
-    header {
+    /* Bio Header */
+    .bio-header {
       background: #fafafa;
-      padding: 3rem 1rem 2rem;
-      text-align: center;
+      padding: 2.5rem 1rem;
       border-bottom: 1px solid #eee;
     }
-    header h1 {
+    .bio-container {
+      display: flex;
+      align-items: center;
+      max-width: 900px;
+      margin: 0 auto;
+      gap: 1.5rem;
+    }
+    .bio-photo {
+      width: 120px;
+      height: 120px;
+      border-radius: 20px;
+      object-fit: cover;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+    .bio-text h1 {
       margin: 0;
       font-size: 2.4rem;
-      color: #111;
       font-weight: 600;
+      color: #111;
       letter-spacing: -0.5px;
     }
-    header p {
-      margin: 0.7rem 0 0;
-      font-size: 1.1rem;
+    .bio-text p {
+      margin: 0.4rem 0;
       color: #666;
+      line-height: 1.5;
+    }
+    .bio-text .meta a {
+      color: #0070c9;
+      text-decoration: none;
+      margin-right: 0.5rem;
+    }
+    .bio-text .meta a:hover {
+      text-decoration: underline;
     }
 
     main {
@@ -59,17 +81,39 @@
       color: #222;
     }
 
-    section ul {
-      padding-left: 1.4rem;
-      margin: 0.5rem 0 0;
+    /* Unified List Style */
+    .edu-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
     }
-    section li {
-      margin-bottom: 0.5rem;
-      color: #444;
+    .edu-list li {
+      margin-bottom: 0.8rem;
+    }
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+    .edu-list .degree {
+      font-weight: 500;
+      color: #333;
+      margin-right: 1rem;
+    }
+    .edu-list .year {
+      color: #666;
+      font-size: 0.95rem;
+      white-space: nowrap;
+    }
+    .sub-list {
+      list-style-type: disc;
+      margin-top: 0.2rem;
+      margin-left: 1.5rem;
+      padding-left: 0;
     }
 
     a {
-      color: #0070c9; /* Apple blue */
+      color: #0070c9;
       text-decoration: none;
     }
     a:hover {
@@ -91,73 +135,82 @@
   </style>
 </head>
 <body>
-  <header>
-    <h1>Seong-Hyeon Hwang</h1>
-    <p>Ph.D student at KAIST · Data-Augmentation · Data-centric AI</p>
+  <!-- Bio Header -->
+  <header class="bio-header">
+    <div class="bio-container">
+      <img src="your_photo.jpg" alt="S. Hwang" class="bio-photo">
+      <div class="bio-text">
+        <h1>Seong-Hyeon Hwang</h1>
+        <p>Ph.D student at KAIST · Data-Augmentation · Data-centric AI</p>
+        <p class="meta">
+          Email: sh (dot) hwang (at) kaist (dot) ac (dot) kr<br>
+          <a href="https://drive.google.com/file/d/1zJl-WMWGnj9Ielb8hNl-Jvs8Sv4XFQEb/view?usp=sharing">CV</a> ·
+          <a href="https://www.linkedin.com/in/shhhwang/">LinkedIn</a> ·
+          <a href="https://github.com/Seong-HyeonHwang">GitHub</a> ·
+          <a href="https://scholar.google.com/citations?user=UXxSS-cAAAAJ&hl=ko">Google Scholar</a>
+        </p>
+      </div>
+    </div>
   </header>
 
   <main>
+    <!-- Summary -->
     <section>
       <h2>Summary</h2>
       <p>I am a Ph.D. student at KAIST <a href="https://sites.google.com/view/whanglab/di-lab?authuser=0">Data Intelligence Lab</a>, advised by Professor <a href="https://sites.google.com/view/whanglab/professor?authuser=0">Steven Euijong Whang</a>. My research interests center on Data Augmentation for Data-centric AI, where I explore methods to improve the robustness of AI systems while enhancing data quality and diversity. I have developed deep expertise in data augmentation techniques that are crucial for enhancing AI model performance and mitigating overfitting. My research contributions span multiple domains including AI, Computer Vision, and Data Mining. I have implemented AI solutions that address real-world challenges, effectively bridging the gap between theoretical research and practical applications.</p>
-      <p class="meta">Email: sh (dot) hwang (at) kaist (dot) ac (dot) kr</p>
-      <p class="meta">
-        <a href="https://drive.google.com/file/d/1zJl-WMWGnj9Ielb8hNl-Jvs8Sv4XFQEb/view?usp=sharing">CV</a> · <a href="https://www.linkedin.com/in/shhhwang/">LinkedIn</a> · <a href="https://github.com/Seong-HyeonHwang">GitHub</a> · <a href="https://scholar.google.com/citations?user=UXxSS-cAAAAJ&hl=ko">Google Scholar</a>
-      </p>
     </section>
-    
+
+    <!-- Publications -->
     <section>
       <h2>Publications</h2>
-      <ul>
+      <ul class="edu-list">
         <li>
           MIDAS: Misalignment-based Data Augmentation Strategy for Imbalanced Multimodal Learning<br>
           <strong><u>S. Hwang</u></strong>*, S. Choi*, and S. E. Whang<br>
           NeurIPS 2025 (Top Machine Learning & AI conference)
         </li>
-    
         <li>
           T-CIL: Temperature Scaling using Adversarial Perturbation for Calibration in Class-Incremental Learning<br>
           <strong><u>S. Hwang</u></strong>, M. Kim, and S. E. Whang<br>
           CVPR 2025 (Top Computer Vision & AI conference)<br>
-          <a href="https://arxiv.org/pdf/2503.22163">Paper</a> · <a href="https://github.com/Seong-HyeonHwang/T-CIL_CVPR2025">Code</a> · <a href="https://docs.google.com/presentation/d/1k2ed8DPXuTsmVnec5Lptptkm-LsyhhW0gZdeZA894YI/edit?usp=sharing">Slides</a> · <a href="https://www.youtube.com/watch?v=GTXrFfrWCBw">Talk</a>
+          <a href="https://arxiv.org/pdf/2503.22163">Paper</a> ·
+          <a href="https://github.com/Seong-HyeonHwang/T-CIL_CVPR2025">Code</a> ·
+          <a href="https://docs.google.com/presentation/d/1k2ed8DPXuTsmVnec5Lptptkm-LsyhhW0gZdeZA894YI/edit?usp=sharing">Slides</a> ·
+          <a href="https://www.youtube.com/watch?v=GTXrFfrWCBw">Talk</a>
         </li>
-    
         <li>
           GradMix: Gradient-based Selective Mixup for Robust Data Augmentation in Class-Incremental Learning<br>
           M. Kim, <strong><u>S. Hwang</u></strong>, and S. E. Whang<br>
           Preprint.<br>
           <a href="https://arxiv.org/pdf/2505.08528">Paper</a>
         </li>
-    
         <li>
           RC-Mixup: A Data Augmentation Strategy against Noisy Data for Regression Tasks<br>
           <strong><u>S. Hwang</u></strong>, M. Kim, and S. E. Whang<br>
           KDD 2024 (Top Data Mining conference)<br>
-          <a href="https://dl.acm.org/doi/abs/10.1145/3637528.3671993">Paper</a> · <a href="https://github.com/Seong-HyeonHwang/RC-Mixup_KDD2024">Code</a> · <a href="https://docs.google.com/presentation/d/1LXjWlfvMWxN6PzhLSurVoF7LM4-ZdtEsCgMxOooUSuI/edit?usp=sharing">Slides</a> · <a href="https://drive.google.com/file/d/1oSl-xmvIRfVS-nfN3Pw0MhPP5NOm5q3b/view?t=1">Talk</a>
+          <a href="https://dl.acm.org/doi/abs/10.1145/3637528.3671993">Paper</a> ·
+          <a href="https://github.com/Seong-HyeonHwang/RC-Mixup_KDD2024">Code</a> ·
+          <a href="https://docs.google.com/presentation/d/1LXjWlfvMWxN6PzhLSurVoF7LM4-ZdtEsCgMxOooUSuI/edit?usp=sharing">Slides</a> ·
+          <a href="https://drive.google.com/file/d/1oSl-xmvIRfVS-nfN3Pw0MhPP5NOm5q3b/view?t=1">Talk</a>
         </li>
-    
         <li>
           Quilt: Robust Data Segment Selection against Concept Drifts<br>
           M. Kim, <strong><u>S. Hwang</u></strong>, and S. E. Whang<br>
           AAAI 2024 (Top AI conference)<br>
           <a href="https://arxiv.org/abs/2312.09691">Paper</a>
         </li>
-    
         <li>
           RegMix: Data Mixing Augmentation for Regression<br>
           <strong><u>S. Hwang</u></strong> and S. E. Whang<br>
           Preprint.<br>
           <a href="https://arxiv.org/abs/2106.03374">Paper</a>
-          
         </li>
-    
         <li>
           Inspector Gadget: A Data Programming-Based Labeling System for Industrial Images<br>
           G. Heo, Y. Roh, <strong><u>S. Hwang</u></strong>, D. Lee, and S. E. Whang<br>
           VLDB 2021 (Top Database conference)<br>
           <a href="https://vldb.org/pvldb/vol14/p28-heo.pdf">Paper</a>
         </li>
-    
         <li>
           Enhancing Data Sparsity in Deep Neural Networks<br>
           S. Lee, <strong><u>S. Hwang</u></strong>, K. Kim, and W. J. Song<br>
@@ -166,6 +219,7 @@
       </ul>
     </section>
 
+    <!-- Education -->
     <section>
       <h2>Education</h2>
       <ul class="edu-list">
@@ -189,7 +243,8 @@
         </li>
       </ul>
     </section>
-    
+
+    <!-- Patent -->
     <section>
       <h2>Patent</h2>
       <ul class="edu-list">
@@ -205,7 +260,8 @@
         </li>
       </ul>
     </section>
-    
+
+    <!-- Experience -->
     <section>
       <h2>Experience</h2>
       <ul class="edu-list">
@@ -218,6 +274,7 @@
             <li>EE205 Data Structures and Algorithms for Electrical Engineering</li>
             <li>EE412 Foundation of Big Data Analytics</li>
             <li>EE477 (EE488B & EE488G) Database and Big Data Systems</li>
+            <li>EE616 Advanced Big Data
             <li>EE616 Advanced Big Data - AI Integration</li>
             <li>HSS310 Special Topics in Economics: Modern Macroeconomic Theory and Dynamic Programming</li>
             <li>Undergraduate Research Program (URP)</li>
@@ -236,7 +293,8 @@
         </li>
       </ul>
     </section>
-    
+
+    <!-- Honors -->
     <section>
       <h2>Honors</h2>
       <ul class="edu-list">
@@ -282,38 +340,6 @@
         </li>
       </ul>
     </section>
-    
-    <style>
-      .edu-list {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-      }
-      .edu-list li {
-        margin-bottom: 0.8rem;
-      }
-      .item-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: baseline;
-      }
-      .edu-list .degree {
-        font-weight: 500;
-        color: #333;
-        margin-right: 1rem;
-      }
-      .edu-list .year {
-        color: #666;
-        font-size: 0.95rem;
-        white-space: nowrap;
-      }
-      .sub-list {
-        list-style-type: disc;
-        margin-top: 0.3rem;
-        margin-left: 1.5rem;
-        padding-left: 0;
-      }
-    </style>
   </main>
 
   <footer>
@@ -321,3 +347,4 @@
   </footer>
 </body>
 </html>
+
