@@ -80,7 +80,19 @@
       font-weight: 600;
       color: #222;
     }
-
+    .pub-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .pub-list li {
+      margin-bottom: 1rem;
+      padding-bottom: 1rem;
+      border-bottom: 0.5px solid rgba(0,0,0,0.06); /* Apple-style 은은한 선 */
+    }
+    .pub-list li:last-child {
+      border-bottom: none;
+    }
     /* Unified List Style */
     .edu-list {
       list-style: none;
@@ -177,7 +189,7 @@
     <!-- Publications -->
     <section>
       <h2>Publications</h2>
-      <ul class="edu-list">
+      <ul class="pub-list">
         <li>
           MIDAS: Misalignment-based Data Augmentation Strategy for Imbalanced Multimodal Learning<br>
           <strong><u>S. Hwang</u></strong>*, S. Choi*, and S. E. Whang<br>
