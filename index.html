@@ -76,66 +76,75 @@
     section h2 {
       font-size: 1.6rem;
       margin-top: 0;
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
       font-weight: 600;
       color: #222;
     }
-    .pub-list {
+
+    /* Accent Bar List Style */
+    .accent-list {
       list-style: none;
       padding: 0;
       margin: 0;
     }
-    .pub-list li {
-      margin-bottom: 1rem;
-      padding-bottom: 1rem;
-      border-bottom: 0.5px solid rgba(0,0,0,0.06); /* Apple-style 은은한 선 */
+    .accent-list > li {
+      margin-bottom: 1.5rem;
+      padding-left: 1rem;
+      border-left: 3px solid #0070c9;
     }
-    .pub-list li:last-child {
-      border-bottom: none;
-    }
-    /* Unified List Style */
-    .edu-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    .edu-list li {
-      margin-bottom: 0.8rem;
+    .accent-list > li:last-child {
+      margin-bottom: 0;
     }
     .item-header {
       display: flex;
       justify-content: space-between;
       align-items: baseline;
+      flex-wrap: wrap;
+      gap: 0.5rem;
     }
-    .edu-list .degree {
+    .item-title {
       font-weight: 500;
-      color: #333;
-      margin-right: 1rem;
+      color: #222;
+      margin: 0;
     }
-    .edu-list .year {
+    .item-year {
       color: #666;
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       white-space: nowrap;
     }
-    .sub-list {
-      list-style-type: disc;
-      margin: 0;
-      padding-left: 1.5rem;
+    .item-sub {
+      color: #666;
+      font-size: 0.95rem;
+      margin-top: 0.4rem;
+      line-height: 1.5;
     }
-    
-    .sub-list li {
-      margin: 0.2rem 0;
-      line-height: 1.25;
+    .item-sub-line {
+      display: block;
+      margin-top: 0.2rem;
     }
-    .sub-sub-list {
-      list-style-type: circle;  /* 동그라미 bullet */
-      margin: 0.1rem 0 0.1rem 1.5rem;  /* 상하 간격 조절, 왼쪽 들여쓰기 */
-      padding-left: 0;
+
+    /* Publication specific */
+    .pub-authors {
+      color: #666;
+      font-size: 0.95rem;
+      margin-top: 0.3rem;
     }
-    
-    .sub-sub-list li {
-      margin: 0.1rem 0;  /* 각 항목 간 간격 */
-      line-height: 1.25;
+    .pub-venue {
+      color: #888;
+      font-size: 0.9rem;
+      margin-top: 0.2rem;
+    }
+    .pub-links {
+      margin-top: 0.4rem;
+    }
+    .pub-links a {
+      color: #0070c9;
+      text-decoration: none;
+      font-size: 0.9rem;
+      margin-right: 0.8rem;
+    }
+    .pub-links a:hover {
+      text-decoration: underline;
     }
 
     a {
@@ -144,11 +153,6 @@
     }
     a:hover {
       text-decoration: underline;
-    }
-
-    .meta {
-      font-size: 0.95rem;
-      color: #666;
     }
 
     footer {
@@ -189,55 +193,69 @@
     <!-- Publications -->
     <section>
       <h2>Publications</h2>
-      <ul class="pub-list">
+      <ul class="accent-list">
         <li>
-          GradMix: Gradient-based Selective Mixup for Robust Data Augmentation in Class-Incremental Learning<br>
-          M. Kim, <strong><u>S. Hwang</u></strong>, and S. E. Whang<br>
-          KDD 2026 (Top Data Mining conference)<br>
-          <a href="https://arxiv.org/pdf/2505.08528">Paper</a>
+          <div class="item-title">GradMix: Gradient-based Selective Mixup for Robust Data Augmentation in Class-Incremental Learning</div>
+          <div class="pub-authors">M. Kim, <strong><u>S. Hwang</u></strong>, and S. E. Whang</div>
+          <div class="pub-venue">KDD 2026 (Top Data Mining conference)</div>
+          <div class="pub-links">
+            <a href="https://arxiv.org/pdf/2505.08528">Paper</a>
+          </div>
         </li>
         <li>
-          MIDAS: Misalignment-based Data Augmentation Strategy for Imbalanced Multimodal Learning<br>
-          <strong><u>S. Hwang</u></strong>*, S. Choi*, and S. E. Whang<br>
-          NeurIPS 2025 (Top Machine Learning & AI conference)<br>
-          <a href="http://arxiv.org/abs/2509.25831">Paper</a> ·
-          <a href="https://github.com/Seong-HyeonHwang/MIDAS_NeurIPS2025">Code</a>
+          <div class="item-title">MIDAS: Misalignment-based Data Augmentation Strategy for Imbalanced Multimodal Learning</div>
+          <div class="pub-authors"><strong><u>S. Hwang</u></strong>*, S. Choi*, and S. E. Whang</div>
+          <div class="pub-venue">NeurIPS 2025 (Top Machine Learning & AI conference)</div>
+          <div class="pub-links">
+            <a href="http://arxiv.org/abs/2509.25831">Paper</a>
+            <a href="https://github.com/Seong-HyeonHwang/MIDAS_NeurIPS2025">Code</a>
+          </div>
         </li>
         <li>
-          T-CIL: Temperature Scaling using Adversarial Perturbation for Calibration in Class-Incremental Learning<br>
-          <strong><u>S. Hwang</u></strong>, M. Kim, and S. E. Whang<br>
-          CVPR 2025 (Top Computer Vision & AI conference)<br>
-          <a href="https://arxiv.org/pdf/2503.22163">Paper</a> ·
-          <a href="https://github.com/Seong-HyeonHwang/T-CIL_CVPR2025">Code</a> ·
-          <a href="https://docs.google.com/presentation/d/1k2ed8DPXuTsmVnec5Lptptkm-LsyhhW0gZdeZA894YI/edit?usp=sharing">Slides</a> ·
-          <a href="https://www.youtube.com/watch?v=GTXrFfrWCBw">Talk</a>
+          <div class="item-title">T-CIL: Temperature Scaling using Adversarial Perturbation for Calibration in Class-Incremental Learning</div>
+          <div class="pub-authors"><strong><u>S. Hwang</u></strong>, M. Kim, and S. E. Whang</div>
+          <div class="pub-venue">CVPR 2025 (Top Computer Vision & AI conference)</div>
+          <div class="pub-links">
+            <a href="https://arxiv.org/pdf/2503.22163">Paper</a>
+            <a href="https://github.com/Seong-HyeonHwang/T-CIL_CVPR2025">Code</a>
+            <a href="https://docs.google.com/presentation/d/1k2ed8DPXuTsmVnec5Lptptkm-LsyhhW0gZdeZA894YI/edit?usp=sharing">Slides</a>
+            <a href="https://www.youtube.com/watch?v=GTXrFfrWCBw">Talk</a>
+          </div>
         </li>
         <li>
-          RC-Mixup: A Data Augmentation Strategy against Noisy Data for Regression Tasks<br>
-          <strong><u>S. Hwang</u></strong>, M. Kim, and S. E. Whang<br>
-          KDD 2024 (Top Data Mining conference)<br>
-          <a href="https://dl.acm.org/doi/abs/10.1145/3637528.3671993">Paper</a> ·
-          <a href="https://github.com/Seong-HyeonHwang/RC-Mixup_KDD2024">Code</a> ·
-          <a href="https://docs.google.com/presentation/d/1LXjWlfvMWxN6PzhLSurVoF7LM4-ZdtEsCgMxOooUSuI/edit?usp=sharing">Slides</a> ·
-          <a href="https://drive.google.com/file/d/1oSl-xmvIRfVS-nfN3Pw0MhPP5NOm5q3b/view?t=1">Talk</a>
+          <div class="item-title">RC-Mixup: A Data Augmentation Strategy against Noisy Data for Regression Tasks</div>
+          <div class="pub-authors"><strong><u>S. Hwang</u></strong>, M. Kim, and S. E. Whang</div>
+          <div class="pub-venue">KDD 2024 (Top Data Mining conference)</div>
+          <div class="pub-links">
+            <a href="https://dl.acm.org/doi/abs/10.1145/3637528.3671993">Paper</a>
+            <a href="https://github.com/Seong-HyeonHwang/RC-Mixup_KDD2024">Code</a>
+            <a href="https://docs.google.com/presentation/d/1LXjWlfvMWxN6PzhLSurVoF7LM4-ZdtEsCgMxOooUSuI/edit?usp=sharing">Slides</a>
+            <a href="https://drive.google.com/file/d/1oSl-xmvIRfVS-nfN3Pw0MhPP5NOm5q3b/view?t=1">Talk</a>
+          </div>
         </li>
         <li>
-          Quilt: Robust Data Segment Selection against Concept Drifts<br>
-          M. Kim, <strong><u>S. Hwang</u></strong>, and S. E. Whang<br>
-          AAAI 2024 (Top AI conference)<br>
-          <a href="https://arxiv.org/abs/2312.09691">Paper</a>
+          <div class="item-title">Quilt: Robust Data Segment Selection against Concept Drifts</div>
+          <div class="pub-authors">M. Kim, <strong><u>S. Hwang</u></strong>, and S. E. Whang</div>
+          <div class="pub-venue">AAAI 2024 (Top AI conference)</div>
+          <div class="pub-links">
+            <a href="https://arxiv.org/abs/2312.09691">Paper</a>
+          </div>
         </li>
         <li>
-          RegMix: Data Mixing Augmentation for Regression<br>
-          <strong><u>S. Hwang</u></strong> and S. E. Whang<br>
-          Preprint.<br>
-          <a href="https://arxiv.org/abs/2106.03374">Paper</a>
+          <div class="item-title">RegMix: Data Mixing Augmentation for Regression</div>
+          <div class="pub-authors"><strong><u>S. Hwang</u></strong> and S. E. Whang</div>
+          <div class="pub-venue">Preprint</div>
+          <div class="pub-links">
+            <a href="https://arxiv.org/abs/2106.03374">Paper</a>
+          </div>
         </li>
         <li>
-          Inspector Gadget: A Data Programming-Based Labeling System for Industrial Images<br>
-          G. Heo, Y. Roh, <strong><u>S. Hwang</u></strong>, D. Lee, and S. E. Whang<br>
-          VLDB 2021 (Top Database conference)<br>
-          <a href="https://vldb.org/pvldb/vol14/p28-heo.pdf">Paper</a>
+          <div class="item-title">Inspector Gadget: A Data Programming-Based Labeling System for Industrial Images</div>
+          <div class="pub-authors">G. Heo, Y. Roh, <strong><u>S. Hwang</u></strong>, D. Lee, and S. E. Whang</div>
+          <div class="pub-venue">VLDB 2021 (Top Database conference)</div>
+          <div class="pub-links">
+            <a href="https://vldb.org/pvldb/vol14/p28-heo.pdf">Paper</a>
+          </div>
         </li>
       </ul>
     </section>
@@ -245,23 +263,23 @@
     <!-- Education -->
     <section>
       <h2>Education</h2>
-      <ul class="edu-list">
+      <ul class="accent-list">
         <li>
           <div class="item-header">
-            <span class="degree">Ph.D. in Electrical Engineering, KAIST</span>
-            <span class="year">Mar. 2021–Feb. 2026 </span>
+            <span class="item-title">Ph.D. in Electrical Engineering, KAIST</span>
+            <span class="item-year">Mar. 2021–Feb. 2026</span>
           </div>
         </li>
         <li>
           <div class="item-header">
-            <span class="degree">M.S. in Electrical Engineering, KAIST</span>
-            <span class="year">Mar. 2019–Feb. 2021</span>
+            <span class="item-title">M.S. in Electrical Engineering, KAIST</span>
+            <span class="item-year">Mar. 2019–Feb. 2021</span>
           </div>
         </li>
         <li>
           <div class="item-header">
-            <span class="degree">B.S. in Electrical Engineering, Yonsei University (Magna cum laude)</span>
-            <span class="year">Mar. 2013–Feb. 2019</span>
+            <span class="item-title">B.S. in Electrical Engineering, Yonsei University (Magna cum laude)</span>
+            <span class="item-year">Mar. 2013–Feb. 2019</span>
           </div>
         </li>
       </ul>
@@ -270,16 +288,16 @@
     <!-- Patent -->
     <section>
       <h2>Patent</h2>
-      <ul class="edu-list">
+      <ul class="accent-list">
         <li>
           <div class="item-header">
-            <span class="degree">Electronic Device Supporting Manufacture of Semiconductor Device and Operating Method of Electronic Device</span>
-            <span class="year">Dec. 2023</span>
+            <span class="item-title">Electronic Device Supporting Manufacture of Semiconductor Device and Operating Method of Electronic Device</span>
+            <span class="item-year">Dec. 2023</span>
           </div>
-          <ul class="sub-list">
-            <li>E. Whang, <strong><u>S. Hwang</u></strong>, H. Kwak, S. Ryu, S. Lee, Y. Sohn</li>
-            <li>10-2023-0163647, domestic, pending (Co-work with Samsung Electronics)</li>
-          </ul>
+          <div class="item-sub">
+            <span class="item-sub-line">E. Whang, <strong><u>S. Hwang</u></strong>, H. Kwak, S. Ryu, S. Lee, Y. Sohn</span>
+            <span class="item-sub-line">10-2023-0163647, domestic, pending (Co-work with Samsung Electronics)</span>
+          </div>
         </li>
       </ul>
     </section>
@@ -287,36 +305,29 @@
     <!-- Experience -->
     <section>
       <h2>Experience</h2>
-      <ul class="edu-list">
+      <ul class="accent-list">
         <li>
           <div class="item-header">
-            <span class="degree">Teaching Assistant, KAIST</span>
-            <span class="year">2019–2023</span>
+            <span class="item-title">Teaching Assistant, KAIST</span>
+            <span class="item-year">2019–2023</span>
           </div>
-          <ul class="sub-list">
-            <li>Data Structures and Algorithms for Electrical Engineering</li>
-            <li>Foundation of Big Data Analytics</li>
-            <li>Database and Big Data Systems</li>
-            <li>Advanced Big Data - AI Integration</li>
-            <li>Special Topics in Economics: Modern Macroeconomic Theory and Dynamic Programming</li>
-            <li>
-              Mentoring
-              <ul class="sub-sub-list">
-                <li>Undergraduate Research Program (URP)</li>
-                <li>EE Co-op Internship</li>
-                <li>Pre-Semiconductor Research Program (Pre-SRP)</li>
-              </ul>
-            </li>
-          </ul>
+          <div class="item-sub">
+            <span class="item-sub-line">Data Structures and Algorithms for Electrical Engineering</span>
+            <span class="item-sub-line">Foundation of Big Data Analytics</span>
+            <span class="item-sub-line">Database and Big Data Systems</span>
+            <span class="item-sub-line">Advanced Big Data - AI Integration</span>
+            <span class="item-sub-line">Special Topics in Economics: Modern Macroeconomic Theory and Dynamic Programming</span>
+            <span class="item-sub-line">Mentoring: Undergraduate Research Program (URP), EE Co-op Internship, Pre-Semiconductor Research Program (Pre-SRP)</span>
+          </div>
         </li>
         <li>
           <div class="item-header">
-            <span class="degree">Undergraduate Researcher, HPCS Lab, SNU</span>
-            <span class="year">Summer 2018</span>
+            <span class="item-title">Undergraduate Researcher, HPCS Lab, SNU</span>
+            <span class="item-year">Summer 2018</span>
           </div>
-          <ul class="sub-list">
-            <li>Topic: Spiking Neural Network (SNN) & High Performance Computing</li>
-          </ul>
+          <div class="item-sub">
+            <span class="item-sub-line">Topic: Spiking Neural Network (SNN) & High Performance Computing</span>
+          </div>
         </li>
       </ul>
     </section>
@@ -324,71 +335,70 @@
     <!-- Honors -->
     <section>
       <h2>Honors</h2>
-      <ul class="edu-list">
+      <ul class="accent-list">
         <li>
           <div class="item-header">
-            <span class="degree">Best PhD Dissertation Award</span>
-            <span class="year">Feb. 2026</span>
+            <span class="item-title">Best PhD Dissertation Award</span>
+            <span class="item-year">Feb. 2026</span>
           </div>
-          <ul class="sub-list">
-            <li>College of Engineering, KAIST</li>
-            <li>Among 1 in KAIST EE</li>
-          </ul>
+          <div class="item-sub">
+            <span class="item-sub-line">College of Engineering, KAIST · Among 1 in KAIST EE</span>
+          </div>
         </li>
         <li>
           <div class="item-header">
-            <span class="degree">Research Breakthroughs</span>
-            <span class="year">Sep. 2024</span>
+            <span class="item-title">Research Breakthroughs</span>
+            <span class="item-year">Sep. 2024</span>
           </div>
-          <ul class="sub-list">
-            <li>Among 15 top biannual research achievements in College of Engineering, KAIST</li>
-            <li>Title: AI updates itself by selecting and augmenting the data it trains on</li>
-          </ul>
+          <div class="item-sub">
+            <span class="item-sub-line">Among 15 top biannual research achievements in College of Engineering, KAIST</span>
+            <span class="item-sub-line">Title: AI updates itself by selecting and augmenting the data it trains on</span>
+          </div>
         </li>
         <li>
           <div class="item-header">
-            <span class="degree">Graduation with Honors: Magna Cum Laude</span>
-            <span class="year">Feb. 2019</span>
+            <span class="item-title">Graduation with Honors: Magna Cum Laude</span>
+            <span class="item-year">Feb. 2019</span>
           </div>
-          <ul class="sub-list">
-            <li>Top 3%, College of Engineering, Yonsei University</li>
-          </ul>
+          <div class="item-sub">
+            <span class="item-sub-line">Top 3%, College of Engineering, Yonsei University</span>
+          </div>
         </li>
         <li>
           <div class="item-header">
-            <span class="degree">Yonsei Jinri Scholarship</span>
-            <span class="year">Spring 2014 – Fall 2014</span>
+            <span class="item-title">Yonsei Jinri Scholarship</span>
+            <span class="item-year">Spring 2014 – Fall 2014</span>
           </div>
-          <ul class="sub-list">
-            <li>Academic Excellence Scholarship, Yonsei University</li>
-          </ul>
+          <div class="item-sub">
+            <span class="item-sub-line">Academic Excellence Scholarship, Yonsei University</span>
+          </div>
         </li>
         <li>
           <div class="item-header">
-            <span class="degree">Academic Excellence Award</span>
-            <span class="year">Fall 2013, Spring 2018</span>
+            <span class="item-title">Academic Excellence Award</span>
+            <span class="item-year">Fall 2013, Spring 2018</span>
           </div>
-          <ul class="sub-list">
-            <li>Top 10%, College of Engineering, Yonsei University</li>
-          </ul>
+          <div class="item-sub">
+            <span class="item-sub-line">Top 10%, College of Engineering, Yonsei University</span>
+          </div>
         </li>
         <li>
           <div class="item-header">
-            <span class="degree">National Scholarship for Science and Engineering</span>
-            <span class="year">Fall 2013</span>
+            <span class="item-title">National Scholarship for Science and Engineering</span>
+            <span class="item-year">Fall 2013</span>
           </div>
-          <ul class="sub-list">
-            <li>KOSAF, South Korea</li>
-          </ul>
+          <div class="item-sub">
+            <span class="item-sub-line">KOSAF, South Korea</span>
+          </div>
         </li>
         <li>
           <div class="item-header">
-            <span class="degree">Academic Excellence Award</span>
-            <span class="year">Spring 2013</span>
+            <span class="item-title">Academic Excellence Award</span>
+            <span class="item-year">Spring 2013</span>
           </div>
-          <ul class="sub-list">
-            <li>Top 3%, College of Engineering, Yonsei University</li>
-          </ul>
+          <div class="item-sub">
+            <span class="item-sub-line">Top 3%, College of Engineering, Yonsei University</span>
+          </div>
         </li>
       </ul>
     </section>
@@ -399,4 +409,3 @@
   </footer>
 </body>
 </html>
-
